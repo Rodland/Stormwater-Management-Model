@@ -55,7 +55,7 @@ endif()
 
 # Sets MSVC compiler flags
 target_compile_options(swmm5
-    PUBLIC
+    PRIVATE
         "$<$<C_COMPILER_ID:MSVC>:"
             "$<$<CONFIG:Release>:/GL>"
             "$<$<CONFIG:Release>:/fp:fast>"
