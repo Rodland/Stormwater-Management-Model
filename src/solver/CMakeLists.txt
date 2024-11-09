@@ -75,7 +75,7 @@ target_link_options(swmm5
 
 target_link_libraries(swmm5
     PUBLIC
-        $<$<NOT:$<BOOL:$<C_COMPILER_ID:MSVC>>>:m>
+        $<$<NOT:$<BOOL:$<PLATFORM_ID:Windows>>>:m>
         $<$<BOOL:${OpenMP_C_FOUND}>:OpenMP::OpenMP_C>
         $<$<BOOL:${OpenMP_AVAILABLE}>:omp>
 )
